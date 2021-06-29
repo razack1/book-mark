@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "node"
+  - "7"
+cache:
+  directories:
+    - node_modules/
+    - dist/
+install:
+  - npm install
+after_success:
+  - surge --project . --domain mydomain.surge.sh

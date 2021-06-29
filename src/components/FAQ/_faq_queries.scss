@@ -1,0 +1,37 @@
+@import "@/styles/import";
+
+@include media(">md") {
+  .faq {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: auto !important;
+
+    &--title {
+      font-size: 2rem;
+    }
+
+    p {
+      width: 550px;
+    }
+
+    &--qna--container {
+      width: 540px;
+      align-self: center;
+    }
+  }
+}
+
+@include media(">xl") {
+  .faq {
+    &--title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      padding: 0;
+    }
+    &--paragraph {
+      font-size: 1rem;
+      width: 500px;
+    }
+  }
+}

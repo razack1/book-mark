@@ -1,0 +1,45 @@
+@import "@/styles/import";
+
+@include media(">md") {
+  .extention {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &--title {
+      font-size: 2rem;
+    }
+    &--paragraph {
+      width: 550px;
+      font-size: 1rem;
+      margin-bottom: 2.5rem !important;
+    }
+    &.plr-2 {
+      margin: 0;
+    }
+  }
+
+  .extention--cards {
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-evenly;
+
+    .app--card {
+      &:nth-child(2) {
+        margin-top: 2rem;
+      }
+      &:nth-child(3) {
+        margin-top: 4rem;
+      }
+    }
+  }
+}
+
+@include media(">xl") {
+  .extention {
+    &--title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "@/styles/import";
+
+.extention {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+
+  &--title {
+    white-space: pre;
+  }
+
+  &--paragraph {
+    margin-bottom: 3.3rem !important;
+  }
+
+  &--cards {
+    display: grid;
+    gap: 3.33rem;
+
+    .app--card {
+      justify-self: center;
+      height: 371px;
+      width: 280px;
+
+      p {
+        margin: unset !important;
+        padding: 6px 0;
+      }
+
+      h3 {
+        margin-top: 2rem;
+      }
+
+      &--content {
+        flex: 1;
+        padding-top: 1.8rem;
+
+        img {
+          width: 110px;
+          margin: auto;
+        }
+      }
+
+      &--footer {
+        padding: 1.5rem 1.625rem;
+
+        .btn {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &--wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: auto !important;
+    width: 100%;
+  }
+}
+
+@import "./extention_queries";

@@ -1,0 +1,126 @@
+@import "./_colors.scss";
+@import "./_typography.scss";
+@import "./_overrides.scss";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
+.layout {
+  font-family: "Rubik", sans-serif !important;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-blue);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--dark-blue);
+  font-weight: 500;
+}
+
+section {
+  z-index: 100;
+}
+
+.btn {
+  font-size: 0.9rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 500;
+  box-shadow: 0 10px 20px #252b4628;
+  transition: all 0.3s ease;
+}
+
+.chrome {
+  color: white;
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+
+  &:hover,
+  &:active {
+    color: var(--blue);
+    background-color: white;
+    border: 2px solid var(--blue);
+  }
+}
+
+.firefox {
+  background-color: var(--light-gray);
+  color: var(--gray);
+  border: 2px solid var(--light-gray);
+
+  &:hover,
+  &:active {
+    color: var(--gray);
+    background-color: var(--light-gray);
+    border: 2px solid var(--gray);
+  }
+}
+
+.submit {
+  background-color: var(--red);
+  color: white;
+  border: 2px solid var(--red);
+
+  &:hover,
+  &:active {
+    color: var(--red);
+    background-color: white;
+    border: 2px solid var(--red);
+  }
+}
+
+p {
+  margin: 1rem 0 1.5rem !important;
+  color: var(--gray) !important;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.fa-twitter,
+.fa-facebook-square {
+  cursor: pointer;
+  color: white !important;
+  &:hover,
+  &:active {
+    color: var(--red) !important;
+    transform: scale(1.2);
+  }
+}
+
+.nav--links {
+  a {
+    color: var(--dark-blue) !important;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover,
+    &:active {
+      color: var(--red) !important;
+    }
+  }
+}
+
+.app-footer--links {
+  a {
+    color: white !important;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover,
+    &:active {
+      color: var(--red) !important;
+    }
+  }
+}

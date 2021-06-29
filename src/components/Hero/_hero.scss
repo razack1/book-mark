@@ -1,0 +1,156 @@
+@import "@/styles/import";
+
+.hero {
+  position: relative;
+  width: 100%;
+  z-index: 100;
+  margin: 3rem 0 2rem;
+
+  &--elipse {
+    position: absolute;
+    height: 203px;
+    width: 310px;
+    top: 60px;
+    right: 0;
+    background-color: var(--blue);
+    border-top-left-radius: 10rem;
+    border-bottom-left-radius: 10rem;
+
+    @include media(">md") {
+      height: 350px;
+      width: 580px;
+      top: 100px;
+    }
+
+    @include media(">xl") {
+      height: 400px;
+      width: 700px;
+      top: 140px;
+    }
+
+    @include media(">xxl") {
+      height: 530px;
+      width: 1000px;
+      top: 170px;
+      border-top-left-radius: 15rem;
+      border-bottom-left-radius: 15rem;
+    }
+  }
+
+  &--wrapper {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &--right {
+    .hero-img {
+      position: relative;
+      transition: all 0.2s ease;
+      width: 365px;
+      z-index: 500;
+    }
+  }
+
+  &--left {
+    text-align: center;
+    margin-top: 0.8rem;
+
+    &--title {
+      margin-top: 1rem;
+      font-size: 1.8rem;
+    }
+
+    &--paragraph {
+      margin: 2rem auto !important;
+    }
+
+    &--btns {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      .btn {
+        white-space: pre;
+        @media screen and (max-width: 768px) {
+          padding: 0.8rem;
+        }
+      }
+    }
+  }
+
+  @include media(">md") {
+    &--wrapper {
+      align-items: unset;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      width: 80%;
+    }
+
+    &--right {
+      margin-right: -2.3rem;
+      .hero-img {
+        width: 620px;
+      }
+    }
+
+    &--left {
+      margin-top: 1.8rem;
+      text-align: left;
+      &--paragraph {
+        padding: 0;
+        margin: 2rem 0 !important;
+      }
+
+      &--title {
+        font-size: 3rem;
+        width: 100%;
+        line-height: 52px;
+        margin: 0;
+      }
+
+      p {
+        margin: 2rem 0 !important;
+      }
+
+      &--paragraph {
+        font-size: 18px;
+      }
+
+      &--btns {
+        justify-content: left;
+        .btn {
+          margin-left: 0;
+          margin-right: 0.8rem;
+        }
+      }
+    }
+  }
+  @include media(">xl") {
+    &--right {
+      margin-right: -3rem;
+      .hero-img {
+        width: 750px;
+      }
+    }
+    &--left {
+      margin-top: 4rem;
+    }
+  }
+
+  @include media(">xxl") {
+    &--right {
+      margin-right: -3.8rem;
+      .hero-img {
+        width: 1000px;
+      }
+    }
+    &--left {
+      &--title {
+        max-width: 700px;
+      }
+      &--paragraph {
+        max-width: 500px;
+      }
+    }
+  }
+}

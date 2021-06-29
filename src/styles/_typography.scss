@@ -1,0 +1,49 @@
+@import "./import";
+
+$top: 5rem;
+$padding-sides: 2rem;
+
+.plr-2 {
+  padding: 0rem $padding-sides;
+}
+
+.bookmark {
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+
+  &:nth-child(2) {
+    min-height: fit-content;
+    margin-bottom: 6rem;
+  }
+
+  @include media(">md") {
+    &:nth-child(2) {
+      flex-direction: row;
+      min-height: 600px;
+    }
+
+    &:nth-child(3) {
+      height: 1000px;
+
+      @include media(">md") {
+        margin-bottom: 1rem;
+      }
+      @include media("<md") {
+        margin-bottom: 6rem;
+      }
+
+      @include media(">xxxl") {
+        min-height: 1100px;
+        margin-bottom: 6rem;
+      }
+    }
+    &:nth-child(4) {
+      margin-bottom: 3rem;
+
+      @include media(">md") {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

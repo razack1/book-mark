@@ -1,0 +1,35 @@
+@media screen and (min-width: 768px) {
+  .app-footer {
+    height: 80px;
+    padding: 0 3rem;
+
+    &--container {
+      width: 80%;
+      margin: auto;
+      flex-direction: row;
+    }
+
+    &--header {
+      margin-bottom: 0;
+      margin-right: 2rem;
+
+      .logo {
+        margin-top: 0.28rem;
+      }
+    }
+
+    &--links {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-right: auto;
+      li {
+        margin: 0;
+      }
+    }
+
+    &--socials {
+      margin-top: 0;
+    }
+  }
+}

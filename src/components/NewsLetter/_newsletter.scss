@@ -1,0 +1,61 @@
+@import "@/styles/import";
+
+.news-letter {
+  padding: 3rem 2rem;
+  height: 425px;
+  text-align: center;
+  background-color: var(--blue);
+  &--container {
+    color: white;
+    margin: 2rem 0 1.5rem;
+    h3 {
+      font-size: 24px;
+      color: white;
+      line-height: 28px;
+      letter-spacing: -0.08pt;
+
+      @include media(">md") {
+        font-size: 2rem;
+        width: 420px;
+        margin: auto;
+      }
+    }
+  }
+  @include media(">md") {
+    &--container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    &--form {
+      margin-top: 3rem !important;
+      width: 465px !important;
+      margin: auto;
+      display: flex !important;
+      justify-content: center;
+
+      .btn.submit {
+        width: 150px;
+        margin: 0 !important;
+        padding: calc(1rem - 2px) !important;
+      }
+
+      .v-form {
+        display: flex !important;
+        justify-content: center;
+        align-items: center !important;
+        gap: 1rem;
+        margin: auto;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.news-letter--container span {
+  text-transform: uppercase;
+  letter-spacing: 4.62px;
+  line-height: 40px;
+  font-size: 12px;
+}

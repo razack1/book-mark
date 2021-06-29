@@ -1,0 +1,239 @@
+@import "./import";
+
+.theme--light.v-tabs > .v-tabs-bar .v-tab:not(.v-tab--active),
+.theme--light.v-tabs > .v-tabs-bar .v-tab:not(.v-tab--active) > .v-icon,
+.theme--light.v-tabs > .v-tabs-bar .v-tab:not(.v-tab--active) > .v-btn,
+.theme--light.v-tabs > .v-tabs-bar .v-tab--disabled .v-tab--active {
+  transition: color 0.3s ease !important;
+
+  &:hover,
+  &:active {
+    color: var(--red) !important;
+  }
+}
+
+.v-tab {
+  text-transform: capitalize !important;
+  background-color: transparent !important;
+  border-bottom: 1px solid rgba(74, 94, 207, 0.341);
+  width: 100%;
+}
+
+.v-window-item--active {
+  margin: 0 !important;
+}
+
+.v-tabs-slider {
+  background-color: var(--red) !important;
+  width: 100% !important;
+  @media screen and (max-width: 1263px) {
+    position: fixed;
+    margin: 2.62rem 0;
+    height: 5px !important;
+    width: 100px !important;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: var(--red) !important;
+    border-top-left-radius: 1rem !important;
+    border-top-right-radius: 1rem !important;
+  }
+}
+
+.v-tabs--vertical > .v-tabs-bar .v-tab {
+  border-bottom: 1px solid rgba(74, 94, 207, 0.341);
+  width: 100% !important;
+  &:nth-child(2) {
+    border-top: 1px solid rgba(74, 94, 207, 0.341);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .v-tabs-slider-wrapper {
+    height: 5px !important;
+    width: 143px !important;
+    left: 85px !important;
+  }
+}
+
+.v-slide-group__content {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.v-window__container {
+  z-index: 500 !important;
+  @media screen and (min-width: 768px) {
+    // height: 700px !important;
+    &--active {
+      // height: 700px !important;
+    }
+  }
+}
+.v-window {
+  background-color: transparent !important;
+  height: auto !important;
+  overflow: unset !important;
+}
+
+.v-item-group {
+  box-shadow: unset !important;
+  border: none !important;
+}
+
+.v-expansion-panel {
+  &:before {
+    box-shadow: none !important;
+  }
+  &-header {
+    padding: 1rem 0 !important;
+    .mdi-chevron-down {
+      transition: all 0.5s ease !important;
+      font-size: 42px !important;
+
+      &::before {
+        color: var(--blue);
+      }
+    }
+  }
+  &-header--active {
+    .mdi-chevron-down {
+      font-size: 42px !important;
+
+      &::before {
+        color: var(--red);
+      }
+    }
+  }
+}
+
+.theme--light.v-expansion-panels .v-expansion-panel:not(:first-child)::after {
+  border-color: rgba(36, 42, 69, 0.226) !important;
+}
+
+.v-expansion-panel-content__wrap {
+  padding: 0 !important;
+  text-align: left;
+
+  p {
+    margin: 1rem 0 !important;
+  }
+}
+
+.v-tabs--vertical > .v-tabs-bar .v-tabs-bar__content {
+  justify-content: center;
+  align-items: center;
+}
+
+.v-text-field > .v-input__control > .v-input__slot {
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.5rem !important;
+}
+
+.theme--light.v-text-field > .v-input__control > .v-input__slot:before {
+  display: none;
+}
+
+.v-application {
+  .v-input {
+    transition: all 0.3s ease-in-out !important;
+  }
+  .error--text {
+    background-color: var(--red);
+    border-radius: 0.5rem !important;
+    padding: 0.2rem 0.2rem;
+    color: white !important;
+  }
+}
+h .v-input__control {
+  transition: all 0.2s ease-in-out !important;
+}
+
+.v-text-field > .v-input__control > .v-input__slot > .v-text-field__slot {
+  background-color: white !important;
+}
+
+.v-text-field {
+  @include media(">md") {
+    margin-top: 2px !important;
+  }
+}
+
+.v-messages {
+  &__wrapper {
+    transition: opacity 1s ease;
+    opacity: 1;
+  }
+  &__message {
+    transition: opacity 1s ease;
+    opacity: 1;
+    font-weight: 400;
+    font-style: italic;
+    color: white !important;
+    line-height: unset !important;
+    letter-spacing: 0.6px;
+  }
+}
+
+.v-input--has-state.error--text .v-label {
+  background-color: transparent !important;
+  padding: 0 0.5rem !important;
+}
+
+.v-input input {
+  max-height: unset !important;
+}
+
+.v-application--is-ltr .v-text-field .v-label {
+  color: black !important;
+}
+
+.v-text-field > .v-input__control > .v-input__slot:after {
+  display: none !important;
+}
+
+.v-input__slot {
+  margin: 0 !important;
+}
+
+.v-application ul,
+.v-application ol {
+  padding: 0 !important;
+}
+.v-input__icon,
+.v-input__icon--append {
+  .v-icon.v-icon {
+    background-color: transparent !important;
+
+    &::after {
+      content: "\f058" !important;
+    }
+  }
+}
+
+.primary--text {
+  color: unset !important;
+  .fa-exclamation-circle {
+    display: none !important;
+  }
+}
+
+.fa-check-circle {
+  color: var(--dark-blue) !important;
+}
+
+.fa-envelope {
+  &::before {
+    color: var(--gray);
+  }
+}
+
+.v-dialog {
+  display: flex;
+  border-radius: unset !important;
+  margin: 0 !important;
+  max-height: 100% !important;
+}
+
+.theme--light.v-divider {
+  border-color: #97979736 !important;
+}
